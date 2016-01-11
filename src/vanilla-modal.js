@@ -118,14 +118,17 @@ export class VanillaModal {
 
   /**
    * @param {Node} el
-   * @param {String} className
+   * @param {String} classes
    */
-  _removeClass(el, className) {
+  _removeClass(el, classes) {
     if (el instanceof HTMLElement === false) return;
     var cssClasses = el.className.split(' ');
-    if (cssClasses.indexOf(className) > -1) {
-      cssClasses.splice(cssClasses.indexOf(className), 1);
-    }
+    var classesName = classes.split(' ');
+    classesName.forEach(function(className) {
+      if (cssClasses.indexOf(className) > -1) {
+        cssClasses.splice(cssClasses.indexOf(className), 1);
+      }
+    });
     el.className = cssClasses.join(' ');
   }
 

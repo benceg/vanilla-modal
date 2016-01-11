@@ -23,7 +23,7 @@
     }
   }
 
-  var _createClass = (function () {
+  var _createClass = function () {
     function defineProperties(target, props) {
       for (var i = 0; i < props.length; i++) {
         var descriptor = props[i];
@@ -39,9 +39,9 @@
       if (staticProps) defineProperties(Constructor, staticProps);
       return Constructor;
     };
-  })();
+  }();
 
-  var VanillaModal = exports.VanillaModal = (function () {
+  var VanillaModal = exports.VanillaModal = function () {
 
     /**
      * @param {Object} [userSettings]
@@ -169,17 +169,20 @@
 
       /**
        * @param {Node} el
-       * @param {String} className
+       * @param {String} classes
        */
 
     }, {
       key: '_removeClass',
-      value: function _removeClass(el, className) {
+      value: function _removeClass(el, classes) {
         if (el instanceof HTMLElement === false) return;
         var cssClasses = el.className.split(' ');
-        if (cssClasses.indexOf(className) > -1) {
-          cssClasses.splice(cssClasses.indexOf(className), 1);
-        }
+        var classesName = classes.split(' ');
+        classesName.forEach(function (className) {
+          if (cssClasses.indexOf(className) > -1) {
+            cssClasses.splice(cssClasses.indexOf(className), 1);
+          }
+        });
         el.className = cssClasses.join(' ');
       }
     }, {
@@ -271,10 +274,10 @@
     }, {
       key: '_closeModalWithTransition',
       value: function _closeModalWithTransition(e) {
-        var _closeTransitionHandler = (function () {
+        var _closeTransitionHandler = function () {
           this.$.modal.removeEventListener(this.$$.transitionEnd, _closeTransitionHandler);
           this._closeModal(e);
-        }).bind(this);
+        }.bind(this);
         this.$.modal.addEventListener(this.$$.transitionEnd, _closeTransitionHandler);
       }
     }, {
@@ -409,6 +412,6 @@
     }]);
 
     return VanillaModal;
-  })();
+  }();
 });
 //# sourceMappingURL=vanilla-modal.js.map
