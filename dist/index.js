@@ -352,6 +352,7 @@
         var matchedNode = matches(e, open);
         if (matchedNode) {
           e.preventDefault();
+          this.closeModal(e);
           this.open(matchedNode, e);
         }
       }
