@@ -165,7 +165,9 @@ export default class VanillaModal {
       throwError('VanillaModal target must exist on page.');
       return;
     }
-    this.releaseNode(this.current);
+    if (this.current) {
+      this.releaseNode(this.current);
+    }
     this.current = getElementContext(allMatches);
     if (typeof onBeforeOpen === 'function') {
       onBeforeOpen.call(this, e);
