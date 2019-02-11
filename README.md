@@ -24,7 +24,7 @@ Written in ECMAScript 2015 and transpiled for universal use with Babel 6.
 
 ## License
 
-[MIT](https://github.com/thephuse/vanilla-modal/blob/master/LICENSE). Please feel free to offer any assistance - pull requests, bug tracking, suggestions are all welcome. The issue tracker is over [here](https://github.com/thephuse/vanilla-modal/issues).
+[MIT](https://github.com/benceg/vanilla-modal/blob/master/LICENSE). Please feel free to offer any assistance - pull requests, bug tracking, suggestions are all welcome. The issue tracker is over [here](https://github.com/benceg/vanilla-modal/issues).
 
 
 ## Q & A
@@ -136,7 +136,7 @@ const modal = new VanillaModal(options);
 
 #### 5. Add your own CSS rules.
 
-[Here's the demo's stylesheet](http://thephuse.github.io/vanilla-modal/modal.css).
+[Here's the demo's stylesheet](http://benceg.github.io/vanilla-modal/modal.css).
 
 Vanilla Modal handles display logic using CSS. Hardware acceleration via CSS transforms comes highly recommended, for a smooth device-agnostic experience.
 
